@@ -327,7 +327,7 @@ class MVBA(nn.Module):
         # Final image = weighted combination of all slot reconstructions
         
         reconstructions = []  # Will store each slot's image
-        masks = []           # Will store each slot's contribution mask
+        masks = []            # Will store each slot's contribution mask
         
         for slot_idx in range(self.n_slots):
             # Decode this slot's features to an image
