@@ -1,0 +1,53 @@
+{
+  "image_id": 1996,
+  "image_path": "images/image_001996.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "bbox": [
+        4,
+        6,
+        25,
+        27
+      ],
+      "center": [
+        14,
+        16
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    },
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        10,
+        22,
+        31,
+        43
+      ],
+      "center": [
+        20,
+        32
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "image_id": 1974,
+  "image_path": "images/image_001974.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        25,
+        28,
+        45,
+        48
+      ],
+      "center": [
+        35,
+        38
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        10,
+        37,
+        30,
+        57
+      ],
+      "center": [
+        20,
+        47
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    }
+  ]
+}

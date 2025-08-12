@@ -1,0 +1,68 @@
+{
+  "dataset_name": "SimpleObjects-MVBA",
+  "version": "1.0",
+  "creation_date": "2025-08-04T14:28:01.411786",
+  "description": "Simple geometric objects dataset optimized for MVBA model training",
+  "dataset_params": {
+    "image_size": 64,
+    "n_train": 8000,
+    "n_test": 2000,
+    "min_objects": 2,
+    "max_objects": 4,
+    "object_size_range": [
+      0.15,
+      0.35
+    ],
+    "shapes": [
+      "circle",
+      "square",
+      "triangle"
+    ],
+    "background_color": [
+      240,
+      240,
+      240
+    ],
+    "seed": 42
+  },
+  "normalization": {
+    "mean": [
+      0.8836993092298507,
+      0.8652132909297943,
+      0.8768928843736649
+    ],
+    "std": [
+      0.19237540516536683,
+      0.22999606053624302,
+      0.21498977916035802
+    ],
+    "info": "Calculated from training set, values in [0, 1] range"
+  },
+  "memory_optimization": {
+    "recommended_batch_sizes": {
+      "8GB_GPU": 8,
+      "15GB_GPU": 16,
+      "24GB_GPU": 32,
+      "32GB_GPU": 48
+    },
+    "image_format": "PNG",
+    "metadata_format": "JSON",
+    "no_masks": "Masks not saved to reduce memory usage"
+  },
+  "mvba_compatibility": {
+    "default_n_slots": 4,
+    "matches_object_range": true,
+    "square_images": true,
+    "decoder_compatible_size": "64 = 8 * 2^3 (decoder upsampling)"
+  },
+  "directory_structure": {
+    "train": {
+      "images": "8000 PNG files",
+      "metadata": "8000 JSON files"
+    },
+    "test": {
+      "images": "2000 PNG files",
+      "metadata": "2000 JSON files"
+    }
+  }
+}

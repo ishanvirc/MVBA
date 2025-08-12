@@ -1,0 +1,53 @@
+{
+  "image_id": 646,
+  "image_path": "images/image_000646.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        17,
+        19,
+        29,
+        31
+      ],
+      "center": [
+        23,
+        25
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "area": 144
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        13,
+        22,
+        35,
+        44
+      ],
+      "center": [
+        24,
+        33
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "area": 484
+    }
+  ]
+}

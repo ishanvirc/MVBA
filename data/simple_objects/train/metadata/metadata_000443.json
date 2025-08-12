@@ -1,0 +1,53 @@
+{
+  "image_id": 443,
+  "image_path": "images/image_000443.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        10,
+        30,
+        21,
+        41
+      ],
+      "center": [
+        15,
+        35
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "area": 121
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        37,
+        46,
+        51,
+        60
+      ],
+      "center": [
+        44,
+        53
+      ],
+      "size": [
+        14,
+        14
+      ],
+      "area": 196
+    }
+  ]
+}

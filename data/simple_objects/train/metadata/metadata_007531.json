@@ -1,0 +1,53 @@
+{
+  "image_id": 7531,
+  "image_path": "images/image_007531.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        35,
+        38,
+        50,
+        53
+      ],
+      "center": [
+        42,
+        45
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "area": 225
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        22,
+        3,
+        40,
+        21
+      ],
+      "center": [
+        31,
+        12
+      ],
+      "size": [
+        18,
+        18
+      ],
+      "area": 324
+    }
+  ]
+}

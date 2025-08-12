@@ -1,0 +1,53 @@
+{
+  "image_id": 6735,
+  "image_path": "images/image_006735.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        15,
+        36,
+        35,
+        56
+      ],
+      "center": [
+        25,
+        46
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        27,
+        23,
+        47,
+        43
+      ],
+      "center": [
+        37,
+        33
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "image_id": 5764,
+  "image_path": "images/image_005764.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        25,
+        12,
+        38,
+        25
+      ],
+      "center": [
+        31,
+        18
+      ],
+      "size": [
+        13,
+        13
+      ],
+      "area": 169
+    },
+    {
+      "shape": "circle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        27,
+        7,
+        42,
+        22
+      ],
+      "center": [
+        34,
+        14
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "area": 225
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "image_id": 804,
+  "image_path": "images/image_000804.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        12,
+        8,
+        32,
+        28
+      ],
+      "center": [
+        22,
+        18
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        29,
+        10,
+        49,
+        30
+      ],
+      "center": [
+        39,
+        20
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "image_id": 2787,
+  "image_path": "images/image_002787.png",
+  "num_objects": 3,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        3,
+        16,
+        13,
+        26
+      ],
+      "center": [
+        8,
+        21
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        33,
+        5,
+        53,
+        25
+      ],
+      "center": [
+        43,
+        15
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    },
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        1,
+        42,
+        22,
+        63
+      ],
+      "center": [
+        11,
+        52
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    }
+  ]
+}

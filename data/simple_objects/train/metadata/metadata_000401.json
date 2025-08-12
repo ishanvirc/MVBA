@@ -1,0 +1,53 @@
+{
+  "image_id": 401,
+  "image_path": "images/image_000401.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        41,
+        17,
+        50,
+        26
+      ],
+      "center": [
+        45,
+        21
+      ],
+      "size": [
+        9,
+        9
+      ],
+      "area": 81
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        14,
+        0,
+        24,
+        10
+      ],
+      "center": [
+        19,
+        5
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    }
+  ]
+}

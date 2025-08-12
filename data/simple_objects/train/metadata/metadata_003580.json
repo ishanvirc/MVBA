@@ -1,0 +1,53 @@
+{
+  "image_id": 3580,
+  "image_path": "images/image_003580.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        11,
+        26,
+        22,
+        37
+      ],
+      "center": [
+        16,
+        31
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "area": 121
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        42,
+        16,
+        52,
+        26
+      ],
+      "center": [
+        47,
+        21
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    }
+  ]
+}

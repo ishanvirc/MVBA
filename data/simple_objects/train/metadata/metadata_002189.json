@@ -1,0 +1,53 @@
+{
+  "image_id": 2189,
+  "image_path": "images/image_002189.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        46,
+        46,
+        58,
+        58
+      ],
+      "center": [
+        52,
+        52
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "area": 144
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        20,
+        24,
+        40,
+        44
+      ],
+      "center": [
+        30,
+        34
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    }
+  ]
+}

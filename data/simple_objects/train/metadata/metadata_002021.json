@@ -1,0 +1,53 @@
+{
+  "image_id": 2021,
+  "image_path": "images/image_002021.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        53,
+        23,
+        64,
+        34
+      ],
+      "center": [
+        58,
+        28
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "area": 121
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        31,
+        20,
+        41,
+        30
+      ],
+      "center": [
+        36,
+        25
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "image_id": 4119,
+  "image_path": "images/image_004119.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        40,
+        52,
+        61
+      ],
+      "center": [
+        41,
+        50
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    },
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "bbox": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "center": [
+        40,
+        45
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    }
+  ]
+}

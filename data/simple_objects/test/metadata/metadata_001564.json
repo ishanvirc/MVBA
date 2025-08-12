@@ -1,0 +1,53 @@
+{
+  "image_id": 1564,
+  "image_path": "images/image_001564.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        33,
+        27,
+        54,
+        48
+      ],
+      "center": [
+        43,
+        37
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        22,
+        31,
+        35,
+        44
+      ],
+      "center": [
+        28,
+        37
+      ],
+      "size": [
+        13,
+        13
+      ],
+      "area": 169
+    }
+  ]
+}

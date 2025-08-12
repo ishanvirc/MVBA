@@ -1,0 +1,53 @@
+{
+  "image_id": 1395,
+  "image_path": "images/image_001395.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        44,
+        37,
+        64,
+        57
+      ],
+      "center": [
+        54,
+        47
+      ],
+      "size": [
+        20,
+        20
+      ],
+      "area": 400
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        44,
+        44,
+        58,
+        58
+      ],
+      "center": [
+        51,
+        51
+      ],
+      "size": [
+        14,
+        14
+      ],
+      "area": 196
+    }
+  ]
+}

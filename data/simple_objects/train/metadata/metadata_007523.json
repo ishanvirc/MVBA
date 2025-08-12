@@ -1,0 +1,53 @@
+{
+  "image_id": 7523,
+  "image_path": "images/image_007523.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        26,
+        1,
+        42,
+        17
+      ],
+      "center": [
+        34,
+        9
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        28,
+        9,
+        44,
+        25
+      ],
+      "center": [
+        36,
+        17
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    }
+  ]
+}

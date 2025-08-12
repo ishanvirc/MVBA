@@ -1,0 +1,53 @@
+{
+  "image_id": 6027,
+  "image_path": "images/image_006027.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        2,
+        45,
+        15,
+        58
+      ],
+      "center": [
+        8,
+        51
+      ],
+      "size": [
+        13,
+        13
+      ],
+      "area": 169
+    },
+    {
+      "shape": "square",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        29,
+        15,
+        47,
+        33
+      ],
+      "center": [
+        38,
+        24
+      ],
+      "size": [
+        18,
+        18
+      ],
+      "area": 324
+    }
+  ]
+}

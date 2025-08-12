@@ -1,0 +1,53 @@
+{
+  "image_id": 3150,
+  "image_path": "images/image_003150.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        40,
+        45,
+        57,
+        62
+      ],
+      "center": [
+        48,
+        53
+      ],
+      "size": [
+        17,
+        17
+      ],
+      "area": 289
+    },
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        17,
+        8,
+        26,
+        17
+      ],
+      "center": [
+        21,
+        12
+      ],
+      "size": [
+        9,
+        9
+      ],
+      "area": 81
+    }
+  ]
+}

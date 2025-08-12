@@ -1,0 +1,53 @@
+{
+  "image_id": 7511,
+  "image_path": "images/image_007511.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        30,
+        44,
+        49,
+        63
+      ],
+      "center": [
+        39,
+        53
+      ],
+      "size": [
+        19,
+        19
+      ],
+      "area": 361
+    },
+    {
+      "shape": "square",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        24,
+        50,
+        35,
+        61
+      ],
+      "center": [
+        29,
+        55
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "area": 121
+    }
+  ]
+}

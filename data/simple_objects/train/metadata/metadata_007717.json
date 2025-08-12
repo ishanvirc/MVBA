@@ -1,0 +1,53 @@
+{
+  "image_id": 7717,
+  "image_path": "images/image_007717.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        19,
+        45,
+        33,
+        59
+      ],
+      "center": [
+        26,
+        52
+      ],
+      "size": [
+        14,
+        14
+      ],
+      "area": 196
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        6,
+        4,
+        17,
+        15
+      ],
+      "center": [
+        11,
+        9
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "area": 121
+    }
+  ]
+}

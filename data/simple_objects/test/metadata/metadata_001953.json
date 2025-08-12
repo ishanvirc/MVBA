@@ -1,0 +1,53 @@
+{
+  "image_id": 1953,
+  "image_path": "images/image_001953.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        6,
+        21,
+        28,
+        43
+      ],
+      "center": [
+        17,
+        32
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "area": 484
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        35,
+        13,
+        50,
+        28
+      ],
+      "center": [
+        42,
+        20
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "area": 225
+    }
+  ]
+}

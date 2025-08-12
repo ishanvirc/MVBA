@@ -1,0 +1,53 @@
+{
+  "image_id": 7232,
+  "image_path": "images/image_007232.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        48,
+        6,
+        63,
+        21
+      ],
+      "center": [
+        55,
+        13
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "area": 225
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        8,
+        6,
+        27,
+        25
+      ],
+      "center": [
+        17,
+        15
+      ],
+      "size": [
+        19,
+        19
+      ],
+      "area": 361
+    }
+  ]
+}

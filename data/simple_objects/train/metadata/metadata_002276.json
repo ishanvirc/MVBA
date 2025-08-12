@@ -1,0 +1,53 @@
+{
+  "image_id": 2276,
+  "image_path": "images/image_002276.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        19,
+        4,
+        41,
+        26
+      ],
+      "center": [
+        30,
+        15
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "area": 484
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        22,
+        2,
+        39,
+        19
+      ],
+      "center": [
+        30,
+        10
+      ],
+      "size": [
+        17,
+        17
+      ],
+      "area": 289
+    }
+  ]
+}

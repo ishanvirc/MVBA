@@ -1,0 +1,53 @@
+{
+  "image_id": 4027,
+  "image_path": "images/image_004027.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "bbox": [
+        7,
+        7,
+        22,
+        22
+      ],
+      "center": [
+        14,
+        14
+      ],
+      "size": [
+        15,
+        15
+      ],
+      "area": 225
+    },
+    {
+      "shape": "circle",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "bbox": [
+        43,
+        37,
+        59,
+        53
+      ],
+      "center": [
+        51,
+        45
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    }
+  ]
+}

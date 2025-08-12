@@ -1,0 +1,53 @@
+{
+  "image_id": 4802,
+  "image_path": "images/image_004802.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        0,
+        255
+      ],
+      "bbox": [
+        10,
+        7,
+        26,
+        23
+      ],
+      "center": [
+        18,
+        15
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    },
+    {
+      "shape": "square",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        38,
+        37,
+        54,
+        53
+      ],
+      "center": [
+        46,
+        45
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    }
+  ]
+}

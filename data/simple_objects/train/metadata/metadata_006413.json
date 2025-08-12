@@ -1,0 +1,53 @@
+{
+  "image_id": 6413,
+  "image_path": "images/image_006413.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        21,
+        23,
+        33,
+        35
+      ],
+      "center": [
+        27,
+        29
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "area": 144
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        26,
+        9,
+        44,
+        27
+      ],
+      "center": [
+        35,
+        18
+      ],
+      "size": [
+        18,
+        18
+      ],
+      "area": 324
+    }
+  ]
+}

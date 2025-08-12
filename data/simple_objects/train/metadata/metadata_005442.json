@@ -1,0 +1,53 @@
+{
+  "image_id": 5442,
+  "image_path": "images/image_005442.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        128,
+        0,
+        255
+      ],
+      "bbox": [
+        36,
+        29,
+        52,
+        45
+      ],
+      "center": [
+        44,
+        37
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "area": 256
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        6,
+        7,
+        25,
+        26
+      ],
+      "center": [
+        15,
+        16
+      ],
+      "size": [
+        19,
+        19
+      ],
+      "area": 361
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "image_id": 7973,
+  "image_path": "images/image_007973.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "circle",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "bbox": [
+        43,
+        32,
+        64,
+        53
+      ],
+      "center": [
+        53,
+        42
+      ],
+      "size": [
+        21,
+        21
+      ],
+      "area": 441
+    },
+    {
+      "shape": "square",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "bbox": [
+        25,
+        30,
+        37,
+        42
+      ],
+      "center": [
+        31,
+        36
+      ],
+      "size": [
+        12,
+        12
+      ],
+      "area": 144
+    }
+  ]
+}

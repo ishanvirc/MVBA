@@ -1,0 +1,53 @@
+{
+  "image_id": 264,
+  "image_path": "images/image_000264.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        29,
+        39,
+        39,
+        49
+      ],
+      "center": [
+        34,
+        44
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    },
+    {
+      "shape": "triangle",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        30,
+        41,
+        52,
+        63
+      ],
+      "center": [
+        41,
+        52
+      ],
+      "size": [
+        22,
+        22
+      ],
+      "area": 484
+    }
+  ]
+}

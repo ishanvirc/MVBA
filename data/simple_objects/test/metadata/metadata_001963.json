@@ -1,0 +1,53 @@
+{
+  "image_id": 1963,
+  "image_path": "images/image_001963.png",
+  "num_objects": 2,
+  "objects": [
+    {
+      "shape": "square",
+      "color": [
+        255,
+        128,
+        0
+      ],
+      "bbox": [
+        46,
+        5,
+        64,
+        23
+      ],
+      "center": [
+        55,
+        14
+      ],
+      "size": [
+        18,
+        18
+      ],
+      "area": 324
+    },
+    {
+      "shape": "circle",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "bbox": [
+        18,
+        47,
+        28,
+        57
+      ],
+      "center": [
+        23,
+        52
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "area": 100
+    }
+  ]
+}
