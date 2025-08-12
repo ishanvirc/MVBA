@@ -1,0 +1,210 @@
+================================================================================
+RECONSTRUCTION QUALITY ABLATION - ANALYSIS REPORT
+================================================================================
+
+1. AGGREGATE METRICS
+----------------------------------------
+
+BASELINE:
+  MSE: 1.173630 ± 0.462003
+  PSNR: -0.319016 ± 1.892802
+  SSIM: 0.086423 ± 0.079864
+  L1: 0.566383 ± 0.199620
+
+SPATIAL_FIXED:
+  MSE: 1.175830 ± 0.462441
+  PSNR: -0.327070 ± 1.894077
+  SSIM: 0.068522 ± 0.079054
+  L1: 0.535719 ± 0.191182
+
+FEATURE_FIXED:
+  MSE: 0.543809 ± 0.299362
+  PSNR: 3.314981 ± 2.488662
+  SSIM: 0.588276 ± 0.301886
+  L1: 0.266241 ± 0.109573
+
+FULL_FIXED:
+  MSE: 0.410799 ± 0.242085
+  PSNR: 4.613717 ± 2.628445
+  SSIM: 0.621033 ± 0.348923
+  L1: 0.213121 ± 0.091270
+
+SPATIAL:
+  MSE: 0.600318 ± 0.305247
+  PSNR: 2.810472 ± 2.360807
+  SSIM: 0.484388 ± 0.359987
+  L1: 0.311784 ± 0.114725
+
+FEATURE:
+  MSE: 0.442407 ± 0.247163
+  PSNR: 4.224319 ± 2.511315
+  SSIM: 0.658166 ± 0.301164
+  L1: 0.221877 ± 0.090456
+
+FULL:
+  MSE: 0.335289 ± 0.179103
+  PSNR: 5.362053 ± 2.363873
+  SSIM: 0.714100 ± 0.292278
+  L1: 0.190200 ± 0.070326
+
+
+2. STATISTICAL COMPARISONS (MSE)
+----------------------------------------
+
+baseline_vs_spatial_fixed:
+  Mean difference: -0.002200
+  Improvement: -0.19%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): -0.140
+
+baseline_vs_feature_fixed:
+  Mean difference: 0.629821
+  Improvement: 53.66%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.083
+
+baseline_vs_full_fixed:
+  Mean difference: 0.762831
+  Improvement: 65.00%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.323
+
+baseline_vs_spatial:
+  Mean difference: 0.573311
+  Improvement: 48.85%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 1.995
+
+baseline_vs_feature:
+  Mean difference: 0.731223
+  Improvement: 62.30%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.227
+
+baseline_vs_full:
+  Mean difference: 0.838341
+  Improvement: 71.43%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.366
+
+spatial_fixed_vs_feature_fixed:
+  Mean difference: 0.632021
+  Improvement: 53.75%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.084
+
+spatial_fixed_vs_full_fixed:
+  Mean difference: 0.765031
+  Improvement: 65.06%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.328
+
+spatial_fixed_vs_spatial:
+  Mean difference: 0.575511
+  Improvement: 48.95%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 1.996
+
+spatial_fixed_vs_feature:
+  Mean difference: 0.733423
+  Improvement: 62.37%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.230
+
+spatial_fixed_vs_full:
+  Mean difference: 0.840541
+  Improvement: 71.48%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 2.368
+
+feature_fixed_vs_full_fixed:
+  Mean difference: 0.133010
+  Improvement: 24.46%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 0.760
+
+feature_fixed_vs_spatial:
+  Mean difference: -0.056509
+  Improvement: -10.39%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): -0.354
+
+feature_fixed_vs_feature:
+  Mean difference: 0.101403
+  Improvement: 18.65%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 0.692
+
+feature_fixed_vs_full:
+  Mean difference: 0.208520
+  Improvement: 38.34%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 1.137
+
+full_fixed_vs_spatial:
+  Mean difference: -0.189520
+  Improvement: -46.13%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): -1.035
+
+full_fixed_vs_feature:
+  Mean difference: -0.031608
+  Improvement: -7.69%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): -0.210
+
+full_fixed_vs_full:
+  Mean difference: 0.075510
+  Improvement: 18.38%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 0.494
+
+spatial_vs_feature:
+  Mean difference: 0.157912
+  Improvement: 26.30%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 0.976
+
+spatial_vs_full:
+  Mean difference: 0.265029
+  Improvement: 44.15%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 1.351
+
+feature_vs_full:
+  Mean difference: 0.107118
+  Improvement: 24.21%
+  p-value: 0.0000 (SIGNIFICANT)
+  Effect size (Cohen's d): 0.811
+
+
+3. ARCHITECTURE-ONLY CONTRIBUTIONS (α=1)
+----------------------------------------
+spatial_fixed_improvement: -0.002200
+feature_fixed_improvement: 0.629821
+full_fixed_improvement: 0.762831
+
+
+4. BBRE ENHANCEMENT EFFECTS
+----------------------------------------
+spatial_bbre_effect: 0.575511
+feature_bbre_effect: 0.101403
+full_bbre_effect: 0.075510
+
+
+5. TRADITIONAL COMPONENT CONTRIBUTIONS
+----------------------------------------
+Spatial binding contribution: 0.573311
+Feature binding contribution: 0.731223
+Synergistic effect: -0.466194
+Total improvement: 0.838341
+
+
+6. TOP IMPROVED SAMPLES
+----------------------------------------
+Sample Index | Baseline MSE | Full MSE | Improvement
+         400 |     2.660678 | 0.623262 |    2.037417
+        1778 |     2.397333 | 0.361878 |    2.035455
+         531 |     2.603374 | 0.622563 |    1.980811
+         606 |     2.310179 | 0.357932 |    1.952247
+         472 |     2.487900 | 0.540137 |    1.947763

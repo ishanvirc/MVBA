@@ -1,0 +1,80 @@
+{
+  "top_improvements": [
+    {
+      "index": 400,
+      "baseline_mse": 2.6606783866882324,
+      "full_mse": 0.6232616305351257,
+      "improvement": 2.0374167561531067
+    },
+    {
+      "index": 1778,
+      "baseline_mse": 2.3973326683044434,
+      "full_mse": 0.3618779182434082,
+      "improvement": 2.035454750061035
+    },
+    {
+      "index": 531,
+      "baseline_mse": 2.6033735275268555,
+      "full_mse": 0.6225625276565552,
+      "improvement": 1.9808109998703003
+    },
+    {
+      "index": 606,
+      "baseline_mse": 2.310178518295288,
+      "full_mse": 0.3579317331314087,
+      "improvement": 1.9522467851638794
+    },
+    {
+      "index": 472,
+      "baseline_mse": 2.4878995418548584,
+      "full_mse": 0.5401365756988525,
+      "improvement": 1.9477629661560059
+    },
+    {
+      "index": 796,
+      "baseline_mse": 2.4476287364959717,
+      "full_mse": 0.5049593448638916,
+      "improvement": 1.94266939163208
+    },
+    {
+      "index": 421,
+      "baseline_mse": 2.5495734214782715,
+      "full_mse": 0.7125561237335205,
+      "improvement": 1.837017297744751
+    },
+    {
+      "index": 613,
+      "baseline_mse": 2.3846983909606934,
+      "full_mse": 0.5526458024978638,
+      "improvement": 1.8320525884628296
+    },
+    {
+      "index": 1568,
+      "baseline_mse": 2.307140827178955,
+      "full_mse": 0.479012668132782,
+      "improvement": 1.828128159046173
+    },
+    {
+      "index": 961,
+      "baseline_mse": 2.3217055797576904,
+      "full_mse": 0.4966098666191101,
+      "improvement": 1.8250957131385803
+    }
+  ],
+  "architecture_contributions": {
+    "spatial_fixed_improvement": -0.0022001365050672295,
+    "feature_fixed_improvement": 0.6298205030746759,
+    "full_fixed_improvement": 0.7628309290837497
+  },
+  "bbre_enhancements": {
+    "spatial_bbre_effect": 0.5755114604644477,
+    "feature_bbre_effect": 0.10140269384533168,
+    "full_bbre_effect": 0.07550982265174389
+  },
+  "component_contributions": {
+    "spatial_contribution": 0.5733113239593804,
+    "feature_contribution": 0.7312231969200076,
+    "synergistic_effect": -0.4661937691438943,
+    "total_improvement": 0.8383407517354936
+  }
+}
