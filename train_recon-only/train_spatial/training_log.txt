@@ -1,0 +1,416 @@
+[2025-08-04 16:58:46] Starting MVBA training on pre-generated dataset
+[2025-08-04 16:58:46] Device: cuda
+[2025-08-04 16:58:46] Output directory: /home/ishanvir-choongh/FBNN/MVBA/train_spatial
+[2025-08-04 16:58:46] Loading dataset...
+[2025-08-04 16:58:46] Creating MVBA model variant: spatial
+[2025-08-04 16:58:46] Using reconstruction loss only for ablation studies
+[2025-08-04 16:58:47] 
+Starting training for 50 epochs...
+[2025-08-04 16:58:47] 
+============================================================
+[2025-08-04 16:58:47] Epoch 1/50
+[2025-08-04 16:58:56] Epoch time: 9.8s
+[2025-08-04 16:58:56] Average loss: 1.3137
+[2025-08-04 16:58:56] Loss components: reconstruction=1.3137, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:58:56] Key metrics: PSNR=-0.40, SSIM=-0.003, Slot diversity=-15.495
+[2025-08-04 16:58:57] Creating visualizations...
+[2025-08-04 16:58:57] 
+============================================================
+[2025-08-04 16:58:57] Epoch 2/50
+[2025-08-04 16:59:06] Epoch time: 9.4s
+[2025-08-04 16:59:06] Average loss: 1.2703
+[2025-08-04 16:59:06] Loss components: reconstruction=1.2703, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:06] Key metrics: PSNR=-0.66, SSIM=0.006, Slot diversity=-15.421
+[2025-08-04 16:59:07] Creating visualizations...
+[2025-08-04 16:59:07] 
+============================================================
+[2025-08-04 16:59:07] Epoch 3/50
+[2025-08-04 16:59:16] Epoch time: 9.4s
+[2025-08-04 16:59:16] Average loss: 1.2601
+[2025-08-04 16:59:16] Loss components: reconstruction=1.2601, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:16] Key metrics: PSNR=-0.97, SSIM=0.045, Slot diversity=-15.347
+[2025-08-04 16:59:16] Creating visualizations...
+[2025-08-04 16:59:17] 
+============================================================
+[2025-08-04 16:59:17] Epoch 4/50
+[2025-08-04 16:59:26] Epoch time: 9.4s
+[2025-08-04 16:59:26] Average loss: 1.2478
+[2025-08-04 16:59:26] Loss components: reconstruction=1.2478, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:26] Key metrics: PSNR=-0.21, SSIM=0.026, Slot diversity=-15.271
+[2025-08-04 16:59:26] Creating visualizations...
+[2025-08-04 16:59:27] 
+============================================================
+[2025-08-04 16:59:27] Epoch 5/50
+[2025-08-04 16:59:36] Epoch time: 9.4s
+[2025-08-04 16:59:36] Average loss: 1.2423
+[2025-08-04 16:59:36] Loss components: reconstruction=1.2423, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:36] Key metrics: PSNR=-0.18, SSIM=0.035, Slot diversity=-15.372
+[2025-08-04 16:59:36] Creating visualizations...
+[2025-08-04 16:59:37] 
+============================================================
+[2025-08-04 16:59:37] Epoch 6/50
+[2025-08-04 16:59:46] Epoch time: 9.4s
+[2025-08-04 16:59:46] Average loss: 1.2321
+[2025-08-04 16:59:46] Loss components: reconstruction=1.2321, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:46] Key metrics: PSNR=-1.19, SSIM=0.038, Slot diversity=-15.198
+[2025-08-04 16:59:46] Creating visualizations...
+[2025-08-04 16:59:47] 
+============================================================
+[2025-08-04 16:59:47] Epoch 7/50
+[2025-08-04 16:59:56] Epoch time: 9.4s
+[2025-08-04 16:59:56] Average loss: 1.2222
+[2025-08-04 16:59:56] Loss components: reconstruction=1.2222, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 16:59:56] Key metrics: PSNR=-0.46, SSIM=0.053, Slot diversity=-15.119
+[2025-08-04 16:59:56] Creating visualizations...
+[2025-08-04 16:59:57] 
+============================================================
+[2025-08-04 16:59:57] Epoch 8/50
+[2025-08-04 17:00:06] Epoch time: 9.4s
+[2025-08-04 17:00:06] Average loss: 1.2167
+[2025-08-04 17:00:06] Loss components: reconstruction=1.2167, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:06] Key metrics: PSNR=-0.40, SSIM=0.071, Slot diversity=-14.975
+[2025-08-04 17:00:06] Creating visualizations...
+[2025-08-04 17:00:06] 
+============================================================
+[2025-08-04 17:00:06] Epoch 9/50
+[2025-08-04 17:00:16] Epoch time: 9.4s
+[2025-08-04 17:00:16] Average loss: 1.2151
+[2025-08-04 17:00:16] Loss components: reconstruction=1.2151, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:16] Key metrics: PSNR=-0.95, SSIM=0.069, Slot diversity=-14.904
+[2025-08-04 17:00:16] Creating visualizations...
+[2025-08-04 17:00:17] 
+============================================================
+[2025-08-04 17:00:17] Epoch 10/50
+[2025-08-04 17:00:26] Epoch time: 9.4s
+[2025-08-04 17:00:26] Average loss: 1.2163
+[2025-08-04 17:00:26] Loss components: reconstruction=1.2163, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:26] Key metrics: PSNR=-0.36, SSIM=0.070, Slot diversity=-15.056
+[2025-08-04 17:00:26] Creating visualizations...
+[2025-08-04 17:00:26] 
+============================================================
+[2025-08-04 17:00:26] Epoch 11/50
+[2025-08-04 17:00:36] Epoch time: 9.4s
+[2025-08-04 17:00:36] Average loss: 1.2143
+[2025-08-04 17:00:36] Loss components: reconstruction=1.2143, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:36] Key metrics: PSNR=0.03, SSIM=0.070, Slot diversity=-14.838
+[2025-08-04 17:00:36] Creating visualizations...
+[2025-08-04 17:00:36] 
+============================================================
+[2025-08-04 17:00:36] Epoch 12/50
+[2025-08-04 17:00:46] Epoch time: 9.5s
+[2025-08-04 17:00:46] Average loss: 1.2131
+[2025-08-04 17:00:46] Loss components: reconstruction=1.2131, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:46] Key metrics: PSNR=-0.15, SSIM=0.089, Slot diversity=-14.893
+[2025-08-04 17:00:46] Creating visualizations...
+[2025-08-04 17:00:46] 
+============================================================
+[2025-08-04 17:00:46] Epoch 13/50
+[2025-08-04 17:00:56] Epoch time: 9.4s
+[2025-08-04 17:00:56] Average loss: 1.2125
+[2025-08-04 17:00:56] Loss components: reconstruction=1.2125, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:00:56] Key metrics: PSNR=-0.98, SSIM=0.076, Slot diversity=-14.827
+[2025-08-04 17:00:56] Creating visualizations...
+[2025-08-04 17:00:56] 
+============================================================
+[2025-08-04 17:00:56] Epoch 14/50
+[2025-08-04 17:01:06] Epoch time: 9.4s
+[2025-08-04 17:01:06] Average loss: 1.2121
+[2025-08-04 17:01:06] Loss components: reconstruction=1.2121, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:06] Key metrics: PSNR=0.08, SSIM=0.031, Slot diversity=-14.880
+[2025-08-04 17:01:06] Creating visualizations...
+[2025-08-04 17:01:06] 
+============================================================
+[2025-08-04 17:01:06] Epoch 15/50
+[2025-08-04 17:01:16] Epoch time: 9.4s
+[2025-08-04 17:01:16] Average loss: 1.2116
+[2025-08-04 17:01:16] Loss components: reconstruction=1.2116, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:16] Key metrics: PSNR=0.07, SSIM=0.041, Slot diversity=-14.892
+[2025-08-04 17:01:16] Creating visualizations...
+[2025-08-04 17:01:16] 
+============================================================
+[2025-08-04 17:01:16] Epoch 16/50
+[2025-08-04 17:01:26] Epoch time: 9.4s
+[2025-08-04 17:01:26] Average loss: 1.2111
+[2025-08-04 17:01:26] Loss components: reconstruction=1.2111, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:26] Key metrics: PSNR=-1.10, SSIM=0.034, Slot diversity=-14.864
+[2025-08-04 17:01:26] Creating visualizations...
+[2025-08-04 17:01:26] 
+============================================================
+[2025-08-04 17:01:26] Epoch 17/50
+[2025-08-04 17:01:36] Epoch time: 9.5s
+[2025-08-04 17:01:36] Average loss: 1.2116
+[2025-08-04 17:01:36] Loss components: reconstruction=1.2116, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:36] Key metrics: PSNR=0.10, SSIM=0.037, Slot diversity=-14.863
+[2025-08-04 17:01:36] Creating visualizations...
+[2025-08-04 17:01:36] 
+============================================================
+[2025-08-04 17:01:36] Epoch 18/50
+[2025-08-04 17:01:46] Epoch time: 9.4s
+[2025-08-04 17:01:46] Average loss: 1.2107
+[2025-08-04 17:01:46] Loss components: reconstruction=1.2107, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:46] Key metrics: PSNR=-0.15, SSIM=0.089, Slot diversity=-14.736
+[2025-08-04 17:01:46] Creating visualizations...
+[2025-08-04 17:01:46] 
+============================================================
+[2025-08-04 17:01:46] Epoch 19/50
+[2025-08-04 17:01:56] Epoch time: 9.4s
+[2025-08-04 17:01:56] Average loss: 1.2092
+[2025-08-04 17:01:56] Loss components: reconstruction=1.2092, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:01:56] Key metrics: PSNR=-0.46, SSIM=0.048, Slot diversity=-14.785
+[2025-08-04 17:01:56] Creating visualizations...
+[2025-08-04 17:01:56] 
+============================================================
+[2025-08-04 17:01:56] Epoch 20/50
+[2025-08-04 17:02:06] Epoch time: 9.5s
+[2025-08-04 17:02:06] Average loss: 1.2100
+[2025-08-04 17:02:06] Loss components: reconstruction=1.2100, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:06] Key metrics: PSNR=-0.98, SSIM=0.040, Slot diversity=-15.188
+[2025-08-04 17:02:06] Creating visualizations...
+[2025-08-04 17:02:06] 
+============================================================
+[2025-08-04 17:02:06] Epoch 21/50
+[2025-08-04 17:02:16] Epoch time: 9.4s
+[2025-08-04 17:02:16] Average loss: 1.2032
+[2025-08-04 17:02:16] Loss components: reconstruction=1.2032, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:16] Key metrics: PSNR=-0.38, SSIM=0.041, Slot diversity=-14.853
+[2025-08-04 17:02:16] Creating visualizations...
+[2025-08-04 17:02:16] 
+============================================================
+[2025-08-04 17:02:16] Epoch 22/50
+[2025-08-04 17:02:26] Epoch time: 9.4s
+[2025-08-04 17:02:26] Average loss: 1.1896
+[2025-08-04 17:02:26] Loss components: reconstruction=1.1896, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:26] Key metrics: PSNR=-0.53, SSIM=0.077, Slot diversity=-14.853
+[2025-08-04 17:02:26] Creating visualizations...
+[2025-08-04 17:02:26] 
+============================================================
+[2025-08-04 17:02:26] Epoch 23/50
+[2025-08-04 17:02:36] Epoch time: 9.4s
+[2025-08-04 17:02:36] Average loss: 1.1673
+[2025-08-04 17:02:36] Loss components: reconstruction=1.1673, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:36] Key metrics: PSNR=-0.50, SSIM=0.087, Slot diversity=-14.654
+[2025-08-04 17:02:36] Creating visualizations...
+[2025-08-04 17:02:36] 
+============================================================
+[2025-08-04 17:02:36] Epoch 24/50
+[2025-08-04 17:02:46] Epoch time: 9.5s
+[2025-08-04 17:02:46] Average loss: 1.1554
+[2025-08-04 17:02:46] Loss components: reconstruction=1.1554, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:46] Key metrics: PSNR=-0.26, SSIM=0.163, Slot diversity=-14.748
+[2025-08-04 17:02:46] Creating visualizations...
+[2025-08-04 17:02:46] 
+============================================================
+[2025-08-04 17:02:46] Epoch 25/50
+[2025-08-04 17:02:56] Epoch time: 9.5s
+[2025-08-04 17:02:56] Average loss: 1.1479
+[2025-08-04 17:02:56] Loss components: reconstruction=1.1479, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:02:56] Key metrics: PSNR=0.77, SSIM=0.095, Slot diversity=-14.736
+[2025-08-04 17:02:56] Creating visualizations...
+[2025-08-04 17:02:56] 
+============================================================
+[2025-08-04 17:02:56] Epoch 26/50
+[2025-08-04 17:03:06] Epoch time: 9.5s
+[2025-08-04 17:03:06] Average loss: 1.1421
+[2025-08-04 17:03:06] Loss components: reconstruction=1.1421, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:06] Key metrics: PSNR=-0.40, SSIM=0.168, Slot diversity=-14.640
+[2025-08-04 17:03:06] Creating visualizations...
+[2025-08-04 17:03:06] 
+============================================================
+[2025-08-04 17:03:06] Epoch 27/50
+[2025-08-04 17:03:16] Epoch time: 9.5s
+[2025-08-04 17:03:16] Average loss: 1.1364
+[2025-08-04 17:03:16] Loss components: reconstruction=1.1364, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:16] Key metrics: PSNR=-0.53, SSIM=0.125, Slot diversity=-14.802
+[2025-08-04 17:03:16] Creating visualizations...
+[2025-08-04 17:03:16] 
+============================================================
+[2025-08-04 17:03:16] Epoch 28/50
+[2025-08-04 17:03:26] Epoch time: 9.5s
+[2025-08-04 17:03:26] Average loss: 1.1329
+[2025-08-04 17:03:26] Loss components: reconstruction=1.1329, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:26] Key metrics: PSNR=-0.03, SSIM=0.174, Slot diversity=-14.875
+[2025-08-04 17:03:26] Creating visualizations...
+[2025-08-04 17:03:26] 
+============================================================
+[2025-08-04 17:03:26] Epoch 29/50
+[2025-08-04 17:03:36] Epoch time: 9.5s
+[2025-08-04 17:03:36] Average loss: 1.1259
+[2025-08-04 17:03:36] Loss components: reconstruction=1.1259, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:36] Key metrics: PSNR=-0.46, SSIM=0.183, Slot diversity=-14.813
+[2025-08-04 17:03:36] Creating visualizations...
+[2025-08-04 17:03:36] 
+============================================================
+[2025-08-04 17:03:36] Epoch 30/50
+[2025-08-04 17:03:46] Epoch time: 9.5s
+[2025-08-04 17:03:46] Average loss: 1.1002
+[2025-08-04 17:03:46] Loss components: reconstruction=1.1002, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:46] Key metrics: PSNR=0.72, SSIM=0.079, Slot diversity=-15.008
+[2025-08-04 17:03:46] Creating visualizations...
+[2025-08-04 17:03:47] 
+============================================================
+[2025-08-04 17:03:47] Epoch 31/50
+[2025-08-04 17:03:56] Epoch time: 9.5s
+[2025-08-04 17:03:56] Average loss: 1.0712
+[2025-08-04 17:03:56] Loss components: reconstruction=1.0712, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:03:56] Key metrics: PSNR=-0.16, SSIM=0.222, Slot diversity=-14.761
+[2025-08-04 17:03:56] Creating visualizations...
+[2025-08-04 17:03:57] 
+============================================================
+[2025-08-04 17:03:57] Epoch 32/50
+[2025-08-04 17:04:06] Epoch time: 9.5s
+[2025-08-04 17:04:06] Average loss: 1.0078
+[2025-08-04 17:04:06] Loss components: reconstruction=1.0078, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:06] Key metrics: PSNR=0.55, SSIM=0.311, Slot diversity=-14.841
+[2025-08-04 17:04:06] Creating visualizations...
+[2025-08-04 17:04:07] 
+============================================================
+[2025-08-04 17:04:07] Epoch 33/50
+[2025-08-04 17:04:16] Epoch time: 9.5s
+[2025-08-04 17:04:16] Average loss: 0.9653
+[2025-08-04 17:04:16] Loss components: reconstruction=0.9653, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:16] Key metrics: PSNR=1.12, SSIM=0.376, Slot diversity=-14.893
+[2025-08-04 17:04:16] Creating visualizations...
+[2025-08-04 17:04:17] 
+============================================================
+[2025-08-04 17:04:17] Epoch 34/50
+[2025-08-04 17:04:26] Epoch time: 9.5s
+[2025-08-04 17:04:26] Average loss: 0.9368
+[2025-08-04 17:04:26] Loss components: reconstruction=0.9368, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:26] Key metrics: PSNR=0.47, SSIM=0.190, Slot diversity=-14.944
+[2025-08-04 17:04:26] Creating visualizations...
+[2025-08-04 17:04:27] 
+============================================================
+[2025-08-04 17:04:27] Epoch 35/50
+[2025-08-04 17:04:36] Epoch time: 9.5s
+[2025-08-04 17:04:36] Average loss: 0.9101
+[2025-08-04 17:04:36] Loss components: reconstruction=0.9101, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:36] Key metrics: PSNR=0.86, SSIM=0.387, Slot diversity=-14.978
+[2025-08-04 17:04:36] Creating visualizations...
+[2025-08-04 17:04:37] 
+============================================================
+[2025-08-04 17:04:37] Epoch 36/50
+[2025-08-04 17:04:46] Epoch time: 9.5s
+[2025-08-04 17:04:46] Average loss: 0.8841
+[2025-08-04 17:04:46] Loss components: reconstruction=0.8841, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:46] Key metrics: PSNR=1.06, SSIM=0.327, Slot diversity=-14.949
+[2025-08-04 17:04:46] Creating visualizations...
+[2025-08-04 17:04:47] 
+============================================================
+[2025-08-04 17:04:47] Epoch 37/50
+[2025-08-04 17:04:56] Epoch time: 9.5s
+[2025-08-04 17:04:56] Average loss: 0.8590
+[2025-08-04 17:04:56] Loss components: reconstruction=0.8590, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:04:56] Key metrics: PSNR=1.81, SSIM=0.524, Slot diversity=-14.872
+[2025-08-04 17:04:56] Creating visualizations...
+[2025-08-04 17:04:57] 
+============================================================
+[2025-08-04 17:04:57] Epoch 38/50
+[2025-08-04 17:05:06] Epoch time: 9.5s
+[2025-08-04 17:05:06] Average loss: 0.8323
+[2025-08-04 17:05:06] Loss components: reconstruction=0.8323, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:06] Key metrics: PSNR=1.75, SSIM=0.471, Slot diversity=-14.910
+[2025-08-04 17:05:06] Creating visualizations...
+[2025-08-04 17:05:07] 
+============================================================
+[2025-08-04 17:05:07] Epoch 39/50
+[2025-08-04 17:05:16] Epoch time: 9.5s
+[2025-08-04 17:05:16] Average loss: 0.8045
+[2025-08-04 17:05:16] Loss components: reconstruction=0.8045, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:16] Key metrics: PSNR=2.20, SSIM=0.316, Slot diversity=-14.936
+[2025-08-04 17:05:16] Creating visualizations...
+[2025-08-04 17:05:17] 
+============================================================
+[2025-08-04 17:05:17] Epoch 40/50
+[2025-08-04 17:05:27] Epoch time: 9.5s
+[2025-08-04 17:05:27] Average loss: 0.7812
+[2025-08-04 17:05:27] Loss components: reconstruction=0.7812, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:27] Key metrics: PSNR=2.25, SSIM=0.431, Slot diversity=-14.944
+[2025-08-04 17:05:27] Creating visualizations...
+[2025-08-04 17:05:27] 
+============================================================
+[2025-08-04 17:05:27] Epoch 41/50
+[2025-08-04 17:05:37] Epoch time: 9.5s
+[2025-08-04 17:05:37] Average loss: 0.7586
+[2025-08-04 17:05:37] Loss components: reconstruction=0.7586, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:37] Key metrics: PSNR=1.41, SSIM=0.407, Slot diversity=-14.992
+[2025-08-04 17:05:37] Creating visualizations...
+[2025-08-04 17:05:37] 
+============================================================
+[2025-08-04 17:05:37] Epoch 42/50
+[2025-08-04 17:05:47] Epoch time: 9.5s
+[2025-08-04 17:05:47] Average loss: 0.7401
+[2025-08-04 17:05:47] Loss components: reconstruction=0.7401, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:47] Key metrics: PSNR=1.74, SSIM=0.471, Slot diversity=-14.941
+[2025-08-04 17:05:47] Creating visualizations...
+[2025-08-04 17:05:47] 
+============================================================
+[2025-08-04 17:05:47] Epoch 43/50
+[2025-08-04 17:05:57] Epoch time: 9.5s
+[2025-08-04 17:05:57] Average loss: 0.7211
+[2025-08-04 17:05:57] Loss components: reconstruction=0.7211, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:05:57] Key metrics: PSNR=2.47, SSIM=0.409, Slot diversity=-14.979
+[2025-08-04 17:05:57] Creating visualizations...
+[2025-08-04 17:05:57] 
+============================================================
+[2025-08-04 17:05:57] Epoch 44/50
+[2025-08-04 17:06:07] Epoch time: 9.5s
+[2025-08-04 17:06:07] Average loss: 0.7007
+[2025-08-04 17:06:07] Loss components: reconstruction=0.7007, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:07] Key metrics: PSNR=2.06, SSIM=0.509, Slot diversity=-15.044
+[2025-08-04 17:06:07] Creating visualizations...
+[2025-08-04 17:06:07] 
+============================================================
+[2025-08-04 17:06:07] Epoch 45/50
+[2025-08-04 17:06:17] Epoch time: 9.5s
+[2025-08-04 17:06:17] Average loss: 0.6805
+[2025-08-04 17:06:17] Loss components: reconstruction=0.6805, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:17] Key metrics: PSNR=2.20, SSIM=0.349, Slot diversity=-15.074
+[2025-08-04 17:06:17] Creating visualizations...
+[2025-08-04 17:06:17] 
+============================================================
+[2025-08-04 17:06:17] Epoch 46/50
+[2025-08-04 17:06:27] Epoch time: 9.5s
+[2025-08-04 17:06:27] Average loss: 0.6622
+[2025-08-04 17:06:27] Loss components: reconstruction=0.6622, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:27] Key metrics: PSNR=2.53, SSIM=0.504, Slot diversity=-15.097
+[2025-08-04 17:06:27] Creating visualizations...
+[2025-08-04 17:06:27] 
+============================================================
+[2025-08-04 17:06:27] Epoch 47/50
+[2025-08-04 17:06:37] Epoch time: 9.5s
+[2025-08-04 17:06:37] Average loss: 0.6456
+[2025-08-04 17:06:37] Loss components: reconstruction=0.6456, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:37] Key metrics: PSNR=2.80, SSIM=0.538, Slot diversity=-15.101
+[2025-08-04 17:06:37] Creating visualizations...
+[2025-08-04 17:06:37] 
+============================================================
+[2025-08-04 17:06:37] Epoch 48/50
+[2025-08-04 17:06:47] Epoch time: 9.6s
+[2025-08-04 17:06:47] Average loss: 0.6292
+[2025-08-04 17:06:47] Loss components: reconstruction=0.6292, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:47] Key metrics: PSNR=3.36, SSIM=0.629, Slot diversity=-15.140
+[2025-08-04 17:06:47] Creating visualizations...
+[2025-08-04 17:06:47] 
+============================================================
+[2025-08-04 17:06:47] Epoch 49/50
+[2025-08-04 17:06:57] Epoch time: 9.5s
+[2025-08-04 17:06:57] Average loss: 0.6133
+[2025-08-04 17:06:57] Loss components: reconstruction=0.6133, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:06:57] Key metrics: PSNR=2.58, SSIM=0.599, Slot diversity=-15.168
+[2025-08-04 17:06:57] Creating visualizations...
+[2025-08-04 17:06:57] 
+============================================================
+[2025-08-04 17:06:57] Epoch 50/50
+[2025-08-04 17:07:07] Epoch time: 9.5s
+[2025-08-04 17:07:07] Average loss: 0.6022
+[2025-08-04 17:07:07] Loss components: reconstruction=0.6022, entropy=0.0000, alpha=0.0000, diversity=0.0000
+[2025-08-04 17:07:07] Key metrics: PSNR=3.62, SSIM=0.534, Slot diversity=-15.164
+[2025-08-04 17:07:07] Creating visualizations...
+[2025-08-04 17:07:07] 
+============================================================
+[2025-08-04 17:07:07] Training complete! Total time: 500.7s (8.3 minutes)
+[2025-08-04 17:07:07] Creating final training curves...
+[2025-08-04 17:07:09] Saved training history to /home/ishanvir-choongh/FBNN/MVBA/train_spatial/metrics/training_history.json
+[2025-08-04 17:07:09] Saved final model to /home/ishanvir-choongh/FBNN/MVBA/train_spatial/final_model_epoch50.pth
+[2025-08-04 17:07:09] 
+Training script complete!
