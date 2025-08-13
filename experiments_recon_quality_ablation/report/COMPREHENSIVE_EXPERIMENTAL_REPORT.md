@@ -424,6 +424,6 @@ This comprehensive ablation study provides strong empirical evidence that:
 3. **Statistical rigor confirms practical significance**: Large effect sizes validate real-world importance
 4. **Synergistic design**: The whole is less than the sum of parts due to overlapping contributions
 
-The statistical methodology employed—paired t-tests, Cohen's d effect sizes, and bootstrap confidence intervals—provides robust evidence for these conclusions. With 2,000 test samples and consistent p-values < 0.001, we can confidently state that BBRE-inspired binding mechanisms, implemented as the Smooth Power-Law, significantly improve reconstruction quality in object-centric representation learning.
+The statistical methodology employed, paired t-tests, Cohen's d effect sizes, and bootstrap confidence intervals, provides robust evidence for these conclusions. With 2,000 test samples and consistent p-values < 0.001, we can confidently state that BBRE-inspired binding mechanisms, implemented as the Smooth Power-Law, significantly improve reconstruction quality in object-centric representation learning.
 
 ---
