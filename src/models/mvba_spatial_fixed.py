@@ -43,7 +43,7 @@ Architecture Overview:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Dict, Tuple, Optional
+from typing import Dict
 
 from .feature_extractor import FeatureExtractor
 from .slot_attention import SlotAttention
@@ -242,14 +242,12 @@ class MVBA(nn.Module):
     def forward(
         self,
         images: torch.Tensor,
-        return_components: bool = False
     ) -> Dict[str, torch.Tensor]:
         """
         Forward pass through MVBA model.
         
         Args:
             images: Input images (B, C, H, W)
-            return_components: Whether to return intermediate components
             
         Returns:
             Dictionary containing:
@@ -259,13 +257,7 @@ class MVBA(nn.Module):
             - 'spatial_attention': Spatial binding maps (B, n_slots, H, W)
             - 'bound_features': Bound feature representations (B, n_slots, slot_dim)
             - 'alphas': Alpha values used for sharpening
-            - 'binding_entropy': Entropy of spatial binding (B,)
-            - 'feature_diversity': Diversity of bound features (B,)
             
-            If return_components=True, also includes:
-            - 'features': Extracted features (B, C, H, W)
-            - 'attention_weights': Slot attention weights
-            - 'enhanced_features': Power-law enhanced features
             
         Raises:
             ValueError: If input shape is invalid
@@ -363,31 +355,6 @@ class MVBA(nn.Module):
         # Weighted sum: each slot's image × its mask, then sum across slots
         reconstruction = (reconstructions * masks_expanded).sum(dim=1)  # (B, C, H, W)
         
-        # === Step 7: Compute Metrics ===
-        # These help us understand how well the model is working
-        
-        # Binding entropy: How certain is the model about object assignments?
-        # Low entropy = confident, high entropy = uncertain
-        binding_entropy = self.spatial_binding.compute_binding_entropy(spatial_attention)
-        
-        # Feature diversity: Compute pairwise distance between slot features
-        # Since spatial_fixed model doesn't have feature binding, use bound_features directly
-        # Normalize features
-        features_norm = F.normalize(bound_features, p=2, dim=-1)
-        
-        # Compute pairwise cosine similarity
-        similarity = torch.bmm(features_norm, features_norm.transpose(1, 2))  # (B, n_slots, n_slots)
-        
-        # Mask diagonal (self-similarity)
-        mask = torch.eye(self.n_slots, device=similarity.device).unsqueeze(0).expand(B, -1, -1)
-        similarity = similarity * (1 - mask)  # Zero out diagonal
-        
-        # Compute average similarity
-        n_pairs = self.n_slots * (self.n_slots - 1)  # Number of unique slot pairs
-        avg_similarity = similarity.sum(dim=[1, 2]) / n_pairs  # (B,)
-        
-        # Convert to diversity score
-        feature_diversity = 1 - avg_similarity.abs()  # (B,)
         
         # === Prepare Output Dictionary ===
         output = {
@@ -397,48 +364,8 @@ class MVBA(nn.Module):
             'slots': slots,                            # Object representations
             'spatial_attention': spatial_attention,    # Where each object is
             'bound_features': bound_features,          # What each object looks like
-            'alphas': alphas,                          # Competition strengths
-            
-            # Metrics
-            'binding_entropy': binding_entropy,        # Confidence measure
-            'feature_diversity': feature_diversity     # Object distinctiveness
+            'alphas': alphas                           # Competition strengths
         }
         
-        # Optionally include intermediate results for analysis
-        if return_components:
-            output.update({
-                'features': features,                   # Raw extracted features
-                'attention_weights': attention_weights, # Initial slot attention
-                'enhanced_features': enhanced_features  # Power-law enhanced features
-            })
         
         return output
-    
-    def get_binding_stats(self, slots: Optional[torch.Tensor] = None) -> Dict[str, float]:
-        """
-        Get statistics about the model's current binding state.
-        This is useful for monitoring training and understanding model behavior.
-        
-        Args:
-            slots: Optional slot representations to compute alpha stats
-                   If provided, will compute statistics about alpha values
-        
-        Returns:
-            Dictionary with binding statistics including:
-            - Alpha value statistics (mean, std) if slots provided
-            - Number of slots and iterations
-            - NaN values if slots not provided
-        """
-        stats = {}
-        
-        # Fixed alpha statistics (always the same)
-        stats['spatial_alpha_mean'] = self.fixed_alpha
-        stats['spatial_alpha_std'] = 0.0  # No variation
-        stats['feature_alpha_mean'] = self.fixed_alpha
-        stats['feature_alpha_std'] = 0.0  # No variation
-        
-        # Add configuration information
-        stats['n_slots'] = self.n_slots  # How many objects we can represent
-        stats['n_iters'] = self.n_iters  # How many refinement iterations we use
-        
-        return stats
