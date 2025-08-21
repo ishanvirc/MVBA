@@ -33,7 +33,7 @@ Design choices:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Dict, Optional
+from typing import Dict
 
 class AlphaGenerator(nn.Module):
     """
@@ -216,42 +216,3 @@ class AlphaGenerator(nn.Module):
         }
         
         return alphas
-    
-    def get_alpha_stats(self, slots: torch.Tensor) -> Dict[str, float]:
-        """
-        Get statistics about generated alpha values.
-        
-        Args:
-            slots: Slot representations
-            
-        Returns:
-            Dictionary with statistics for each alpha type:
-            - {name}_mean: Average alpha value
-            - {name}_std: Standard deviation (variation between slots)
-            - {name}_min: Minimum alpha value
-            - {name}_max: Maximum alpha value
-            
-        Example output:
-            {
-                'spatial_alpha_mean': 1.8,
-                'spatial_alpha_std': 0.3,
-                'spatial_alpha_min': 1.2,
-                'spatial_alpha_max': 2.4,
-                'feature_alpha_mean': 2.1,
-                ...
-            }
-        """
-        # Compute without tracking gradients (more efficient)
-        with torch.no_grad():
-            alphas = self.forward(slots)
-            
-            stats = {}
-            for name, alpha_vals in alphas.items():
-                # Flatten the statistics into a single dictionary
-                # This makes it easier to log and monitor
-                stats[f'{name}_alpha_mean'] = alpha_vals.mean().item()
-                stats[f'{name}_alpha_std'] = alpha_vals.std().item()
-                stats[f'{name}_alpha_min'] = alpha_vals.min().item()
-                stats[f'{name}_alpha_max'] = alpha_vals.max().item()
-            
-            return stats
