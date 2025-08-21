@@ -354,38 +354,3 @@ class SpatialBinding(nn.Module):
         spatial_attention = F.softmax(scaled_logits, dim=1)  # (B, n_slots, H, W)
         
         return spatial_attention
-    
-
-    def compute_binding_entropy(self, spatial_attention: torch.Tensor) -> torch.Tensor:
-        """
-        Compute entropy of spatial binding for monitoring.
-        
-        The math:
-        Entropy = -Σ p * log(p)
-        where p is the probability of each slot at each location
-        
-        Args:
-            spatial_attention: Spatial attention maps (B, n_slots, H, W)
-                              Values are probabilities that sum to 1 across slots
-            
-        Returns:
-            Average entropy values for each image in batch (B,)
-            Lower values indicate better, more decisive binding
-        """
-        # Add small epsilon to prevent log(0) which would give -inf
-        eps = 1e-8
-        log_attention = torch.log(spatial_attention + eps)
-        
-        # Compute entropy at each spatial location
-        # Entropy formula: H = -Σ p * log(p)
-        # Sum across slots (dim=1) to get entropy at each pixel
-        entropy = -(spatial_attention * log_attention).sum(dim=1)  # (B, H, W)
-        
-        # Average entropy across all spatial locations
-        # This gives us a single entropy value per image
-        mean_entropy = entropy.mean(dim=[1, 2])  # (B,)
-        
-        # Interpretation:
-        # - In practice, good binding gives entropy < 0.5
-        
-        return mean_entropy
