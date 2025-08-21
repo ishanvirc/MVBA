@@ -179,22 +179,26 @@ class FeatureBinding(nn.Module):
         alpha_expanded = alpha.view(B, n_slots, 1, 1, 1)
         
         # Step 1: Separate sign and magnitude
-        # sign: -1, 0, or +1 for each feature
+        # sign: -1, 0, or +1 for each feature (B, n_slots, C, H, W)
         sign = torch.sign(features)
-        # magnitude: absolute value (always positive)
+        # magnitude: absolute value (always positive) (B, n_slots, C, H, W)
         magnitude = torch.abs(features) + eps  # Add eps to avoid log(0)
         
         # Step 2: Apply power law using log-exp trick
         # log-exp is more numerically stable than direct power
         # |f|^a = exp(a × log(|f|))
+        # (B, n_slots, 1, 1, 1) * log(B, n_slots, C, H, W) -> (B, n_slots, C, H, W)
         enhanced_magnitude = torch.exp(alpha_expanded * torch.log(magnitude))
         
         # Step 3: Normalize to prevent feature explosion
         # Normalization technique: Divide by mean 
+        # Mean across C, H, W dimensions -> (B, n_slots, 1, 1, 1)
         mean_magnitude = enhanced_magnitude.mean(dim=(2, 3, 4), keepdim=True) + eps
+        # (B, n_slots, C, H, W) / (B, n_slots, 1, 1, 1) -> (B, n_slots, C, H, W)
         enhanced_norm = enhanced_magnitude / mean_magnitude
         
         # Step 4: Restore direction
+        # (B, n_slots, C, H, W) * (B, n_slots, C, H, W) -> (B, n_slots, C, H, W)
         enhanced = sign * enhanced_norm
         
         return enhanced
