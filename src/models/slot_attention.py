@@ -223,7 +223,7 @@ class SlotAttention(nn.Module):
         # - Encourages specialization through activation biasing
         for i in range(self.n_slots):
             # Create spatial bias for slot i
-            spatial_bias = torch.zeros_like(slots[:, i]).  # (batch_size, slot_dim)
+            spatial_bias = torch.zeros_like(slots[:, i])  # (batch_size, slot_dim)
             
             # Give each slot enhanced activation in different dimensions
             # With 4 slots, slot_dim=128:
