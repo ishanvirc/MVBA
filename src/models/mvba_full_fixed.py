@@ -43,7 +43,7 @@ Architecture Overview:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Dict, Tuple, Optional
+from typing import Dict
 
 from .feature_extractor import FeatureExtractor
 from .slot_attention import SlotAttention
@@ -251,14 +251,12 @@ class MVBA(nn.Module):
     def forward(
         self,
         images: torch.Tensor,
-        return_components: bool = False
     ) -> Dict[str, torch.Tensor]:
         """
         Forward pass through MVBA model.
         
         Args:
             images: Input images (B, C, H, W)
-            return_components: Whether to return intermediate components
             
         Returns:
             Dictionary containing:
@@ -268,13 +266,7 @@ class MVBA(nn.Module):
             - 'spatial_attention': Spatial binding maps (B, n_slots, H, W)
             - 'bound_features': Bound feature representations (B, n_slots, slot_dim)
             - 'alphas': Alpha values used for sharpening
-            - 'binding_entropy': Entropy of spatial binding (B,)
-            - 'feature_diversity': Diversity of bound features (B,)
             
-            If return_components=True, also includes:
-            - 'features': Extracted features (B, C, H, W)
-            - 'attention_weights': Slot attention weights
-            - 'enhanced_features': Power-law enhanced features
             
         Raises:
             ValueError: If input shape is invalid
@@ -377,16 +369,7 @@ class MVBA(nn.Module):
         reconstruction = (reconstructions * masks_expanded).sum(dim=1)  # (B, C, H, W)
         
         # === Step 7: Compute Metrics ===
-        # These help us understand how well the model is working
-        
-        # Binding entropy: How certain is the model about object assignments?
-        # Low entropy = confident, high entropy = uncertain
-        binding_entropy = self.spatial_binding.compute_binding_entropy(spatial_attention)
-        
-        # Feature diversity: How different are the objects from each other?
-        # High diversity = slots represent different things (good!)
-        feature_diversity = self.feature_binding.compute_feature_diversity(bound_features)
-        
+                
         # === Prepare Output Dictionary ===
         output = {
             # Main outputs
@@ -395,48 +378,8 @@ class MVBA(nn.Module):
             'slots': slots,                            # Object representations
             'spatial_attention': spatial_attention,    # Where each object is
             'bound_features': bound_features,          # What each object looks like
-            'alphas': alphas,                          # Competition strengths
-            
-            # Metrics
-            'binding_entropy': binding_entropy,        # Confidence measure
-            'feature_diversity': feature_diversity     # Object distinctiveness
+            'alphas': alphas                           # Competition strengths
         }
         
-        # Optionally include intermediate results for analysis
-        if return_components:
-            output.update({
-                'features': features,                   # Raw extracted features
-                'attention_weights': attention_weights, # Initial slot attention
-                'enhanced_features': enhanced_features  # Power-law enhanced features
-            })
         
         return output
-    
-    def get_binding_stats(self, slots: Optional[torch.Tensor] = None) -> Dict[str, float]:
-        """
-        Get statistics about the model's current binding state.
-        This is useful for monitoring training and understanding model behavior.
-        
-        Args:
-            slots: Optional slot representations to compute alpha stats
-                   If provided, will compute statistics about alpha values
-        
-        Returns:
-            Dictionary with binding statistics including:
-            - Alpha value statistics (mean, std) if slots provided
-            - Number of slots and iterations
-            - NaN values if slots not provided
-        """
-        stats = {}
-        
-        # Fixed alpha statistics (always the same)
-        stats['spatial_alpha_mean'] = self.fixed_alpha
-        stats['spatial_alpha_std'] = 0.0  # No variation
-        stats['feature_alpha_mean'] = self.fixed_alpha
-        stats['feature_alpha_std'] = 0.0  # No variation
-        
-        # Add configuration information
-        stats['n_slots'] = self.n_slots  # How many objects we can represent
-        stats['n_iters'] = self.n_iters  # How many refinement iterations we use
-        
-        return stats
