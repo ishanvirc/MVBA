@@ -43,7 +43,7 @@ Architecture Overview:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Dict, Tuple, Optional
+from typing import Dict
 
 from .feature_extractor import FeatureExtractor
 from .slot_attention import SlotAttention
@@ -227,14 +227,12 @@ class MVBA(nn.Module):
     def forward(
         self,
         images: torch.Tensor,
-        return_components: bool = False
     ) -> Dict[str, torch.Tensor]:
         """
         Forward pass through MVBA model.
         
         Args:
             images: Input images (B, C, H, W)
-            return_components: Whether to return intermediate components
             
         Returns:
             Dictionary containing:
@@ -244,13 +242,7 @@ class MVBA(nn.Module):
             - 'spatial_attention': Spatial binding maps (B, n_slots, H, W)
             - 'bound_features': Bound feature representations (B, n_slots, slot_dim)
             - 'alphas': Alpha values used for sharpening
-            - 'binding_entropy': Entropy of spatial binding (B,)
-            - 'feature_diversity': Diversity of bound features (B,)
             
-            If return_components=True, also includes:
-            - 'features': Extracted features (B, C, H, W)
-            - 'attention_weights': Slot attention weights
-            - 'enhanced_features': Power-law enhanced features
             
         Raises:
             ValueError: If input shape is invalid
@@ -347,41 +339,6 @@ class MVBA(nn.Module):
         spatial_attention = masks
         
         # === Step 7: Compute Metrics ===
-        # These help us understand how well the model is working
-        
-        # Baseline: Compute binding entropy from slot attention weights
-        # Even without spatial binding module, we can measure slot assignment uncertainty
-        # Reshape attention weights to (B, n_slots, H*W) then back to (B, n_slots, H, W)
-        H, W = images.shape[2], images.shape[3]
-        attention_maps = attention_weights.reshape(B, self.n_slots, H, W)
-        
-        # Normalize attention across slots for each pixel (ensure competition)
-        attention_probs = attention_maps / (attention_maps.sum(dim=1, keepdim=True) + 1e-8)
-        
-        # Compute entropy: -sum(p * log(p))
-        eps = 1e-8
-        log_attention = torch.log(attention_probs + eps)
-        entropy = -(attention_probs * log_attention).sum(dim=1)  # (B, H, W)
-        binding_entropy = entropy.mean(dim=[1, 2])  # Average over spatial dims -> (B,)
-        
-        # Feature diversity: Compute pairwise distance between slot features
-        # Since baseline doesn't have feature binding, use bound_features directly
-        # Normalize features
-        features_norm = F.normalize(bound_features, p=2, dim=-1)
-        
-        # Compute pairwise cosine similarity
-        similarity = torch.bmm(features_norm, features_norm.transpose(1, 2))  # (B, n_slots, n_slots)
-        
-        # Mask diagonal (self-similarity)
-        mask = torch.eye(self.n_slots, device=similarity.device).unsqueeze(0).expand(B, -1, -1)
-        similarity = similarity * (1 - mask)  # Zero out diagonal
-        
-        # Compute average similarity
-        n_pairs = self.n_slots * (self.n_slots - 1)  # Number of unique slot pairs
-        avg_similarity = similarity.sum(dim=[1, 2]) / n_pairs  # (B,)
-        
-        # Convert to diversity score
-        feature_diversity = 1 - avg_similarity.abs()  # (B,)
         
         # === Prepare Output Dictionary ===
         output = {
@@ -391,49 +348,8 @@ class MVBA(nn.Module):
             'slots': slots,                            # Object representations
             'spatial_attention': spatial_attention,    # Where each object is
             'bound_features': bound_features,          # What each object looks like
-            'alphas': alphas,                          # Competition strengths
-            
-            # Metrics
-            'binding_entropy': binding_entropy,        # Confidence measure
-            'feature_diversity': feature_diversity     # Object distinctiveness
+            'alphas': alphas                           # Competition strengths
         }
         
-        # Optionally include intermediate results for analysis
-        if return_components:
-            output.update({
-                'features': features,                   # Raw extracted features
-                'attention_weights': attention_weights, # Initial slot attention
-                'enhanced_features': enhanced_features  # Power-law enhanced features
-            })
         
         return output
-    
-    def get_binding_stats(self, slots: Optional[torch.Tensor] = None) -> Dict[str, float]:
-        """
-        Get statistics about the model's current binding state.
-        This is useful for monitoring training and understanding model behavior.
-        
-        Args:
-            slots: Optional slot representations to compute alpha stats
-                   If provided, will compute statistics about alpha values
-        
-        Returns:
-            Dictionary with binding statistics including:
-            - Alpha value statistics (mean, std) if slots provided
-            - Number of slots and iterations
-            - NaN values if slots not provided
-        """
-        stats = {}
-        
-        # Baseline model doesn't have alpha generator
-        # Return NaN for all alpha statistics
-        stats['spatial_alpha_mean'] = float('nan')  # Average spatial competition
-        stats['spatial_alpha_std'] = float('nan')   # Variation in spatial competition
-        stats['feature_alpha_mean'] = float('nan')  # Average feature enhancement
-        stats['feature_alpha_std'] = float('nan')   # Variation in feature enhancement
-        
-        # Add configuration information
-        stats['n_slots'] = self.n_slots  # How many objects we can represent
-        stats['n_iters'] = self.n_iters  # How many refinement iterations we use
-        
-        return stats
