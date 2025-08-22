@@ -1,0 +1,110 @@
+experiment:
+  name: "Reconstruction Quality Ablation (7 Variants)"
+  description: "Complete ablation testing architecture vs BBRE enhancement contributions"
+  
+data:
+  test_data_path: "/home/ishanvir-choongh/FBNN/MVBA/data/simple_objects/test"
+  total_test_samples: 2000         # Available test images
+  dataset_info_path: "/home/ishanvir-choongh/FBNN/MVBA/data/simple_objects/dataset_info.json"
+  
+evaluation:
+  n_test_samples: 2000             # Use all test samples for robust analysis
+  batch_size: 16                   # For efficient GPU processing
+  random_seed: 42                  # For reproducibility
+  sample_indices: [763,861,253,531,1777,173,1727,961,841,552,1577,641,9,715,323,586,1487,1393,297,163,1859,673,887,1912,400] # for visualization
+  device: "cuda"                   # Use GPU if available
+  
+models:
+  checkpoint_epoch: 50             # checkpoint to load (or latest available)
+  base_path: "/home/ishanvir-choongh/FBNN/MVBA"
+  image_size: 64
+  n_slots: 4
+  n_iters: 3
+  slot_dim: 128
+  feature_dim: 64
+  variants:
+    # Baseline: Slot Attention Only
+    baseline:
+      name: "Baseline (Slot Attention Only)"
+      checkpoint: "train_recon-only/train_baseline/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_baseline"
+    
+    # Fixed Alpha Variants (alpha=1, Architecture Only - No BBRE Enhancement)
+    spatial_fixed:
+      name: "Spatial Binding (No Enhancement, alpha=1)"
+      checkpoint: "train_recon-only/train_spatial_fixed/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_spatial_fixed"
+    feature_fixed:
+      name: "Feature Binding (No Enhancement, alpha=1)"
+      checkpoint: "train_recon-only/train_feature_fixed/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_feature_fixed"
+    full_fixed:
+      name: "Full Model (No Enhancement, alpha=1)"
+      checkpoint: "train_recon-only/train_full_fixed/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_full_fixed"
+    
+    # Dynamic Alpha Variants (alpha∈[1,3], BBRE Enhanced)
+    spatial:
+      name: "Spatial Binding (BBRE Enhanced, alpha∈[1,3])"
+      checkpoint: "train_recon-only/train_spatial/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_spatial"
+    feature:
+      name: "Feature Binding (BBRE Enhanced, alpha∈[1,3])"
+      checkpoint: "train_recon-only/train_feature/checkpoints/epoch_50.pth"
+      module: "src.models.mvba_feature"
+    full:
+      name: "Full Model (BBRE Enhanced, alpha∈[1,3])"
+      checkpoint: "train_recon-only/train_full/checkpoints/epoch_50.pth"
+      module: "src.models.mvba"
+    
+metrics:
+  primary:
+    - mse                          # Main metric for binding quality
+    - psnr                         # Peak signal-to-noise ratio
+    - ssim                         # Structural similarity
+  secondary:
+    - l1                           # L1 loss
+    - per_slot_mse                 # MSE for each slot's reconstruction
+  compute_expensive: true          # Enable SSIM computation
+    
+visualization:
+  n_display_samples: 10            # Number of samples for detailed visualization
+  error_colormap: "RdBu"           # Diverging colormap for errors
+  save_format: "png"
+  dpi: 300                         # Publication quality
+  figsize:
+    comparison: [24, 14]           # Larger size for 7-variant comparisons
+    analysis: [14, 10]             # Size for analysis plots
+    
+analysis:
+  statistical_tests:
+    perform_t_test: true           # Paired t-test between variants
+    confidence_level: 0.95         # 95% confidence interval
+  binding_failure_analysis:
+    check_color_swaps: true        # Analyze color assignment errors
+    check_boundary_quality: true   # Measure edge sharpness
+    check_feature_bleeding: true   # Detect attribute mixing
+
+# Scientific Framework Documentation
+scientific_framework:
+  hypothesis: "Power-Law (BBRE) enhancement improves reconstruction quality beyond architectural contributions"
+  
+  comparisons:
+    architecture_only:
+      - "baseline vs spatial_fixed: Pure spatial binding architecture"
+      - "baseline vs feature_fixed: Pure feature binding architecture"
+      - "baseline vs full_fixed: Pure combined binding architecture"
+      - "spatial_fixed vs feature_fixed: Spatial vs feature architecture"
+    
+    bbre_enhancement:
+      - "spatial_fixed vs spatial: BBRE enhancement effect on spatial binding"
+      - "feature_fixed vs feature: BBRE enhancement effect on feature binding"
+      - "full_fixed vs full: BBRE enhancement effect on combined binding"
+    
+    optimal_combination:
+      - "All 7 variants: Complete architecture + enhancement ablation"
+  
+  expected_results:
+    - "Architecture-only variants should outperform baseline"
+    - "BBRE-enhanced variants should outperform fixed-alpha equivalents"
+    - "Full model with BBRE should achieve best overall performance"
