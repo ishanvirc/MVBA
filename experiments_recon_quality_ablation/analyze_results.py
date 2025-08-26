@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Reconstruction Quality Ablation - Analysis Script (7 Variants)
 
