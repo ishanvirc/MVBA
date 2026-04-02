@@ -3,9 +3,9 @@ experiment:
   description: "Complete ablation testing architecture vs BBRE enhancement contributions"
   
 data:
-  test_data_path: "/home/ishanvir-choongh/FBNN/MVBA/data/simple_objects/test"
+  test_data_path: "MVBA/data/simple_objects/test"
   total_test_samples: 2000         # Available test images
-  dataset_info_path: "/home/ishanvir-choongh/FBNN/MVBA/data/simple_objects/dataset_info.json"
+  dataset_info_path: "/MVBA/data/simple_objects/dataset_info.json"
   
 evaluation:
   n_test_samples: 2000             # Use all test samples for robust analysis
@@ -16,7 +16,7 @@ evaluation:
   
 models:
   checkpoint_epoch: 50             # checkpoint to load (or latest available)
-  base_path: "/home/ishanvir-choongh/FBNN/MVBA"
+  base_path: "/MVBA"
   image_size: 64
   n_slots: 4
   n_iters: 3
