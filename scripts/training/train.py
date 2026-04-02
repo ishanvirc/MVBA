@@ -165,8 +165,8 @@ def main():
     args = parse_args()
     
     # === Training Configuration ===
-    DATA_DIR = '/home/ishanvir-choongh/FBNN/MVBA/data/simple_objects'  # Pre-generated dataset
-    OUTPUT_DIR = f'/home/ishanvir-choongh/FBNN/MVBA/train_{args.model_variant}'  # Model-specific output
+    DATA_DIR = '/MVBA/data/simple_objects'  # dataset
+    OUTPUT_DIR = f'MVBA/train_{args.model_variant}'  # Model-specific output
     EPOCHS = args.epochs          # Number of complete passes through dataset
     BATCH_SIZE = args.batch_size  # Images processed together
     LEARNING_RATE = 1e-4          # Adam optimizer step size
