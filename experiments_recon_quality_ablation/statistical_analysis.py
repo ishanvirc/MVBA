@@ -394,7 +394,7 @@ def create_diagnostic_plots(df_wide: pd.DataFrame, output_dir: Path):
     
     # Load Cohen's d values from statistical tests JSON
     import json
-    stats_json_path = Path('/home/ishanvir-choongh/FBNN/MVBA/experiments/Recon_quality_ablation_recon-loss-only/results/analysis/statistical_tests.json')
+    stats_json_path = Path('/MVBA/experiments/Recon_quality_ablation_recon-loss-only/results/analysis/statistical_tests.json')
     
     # Read the JSON file
     with open(stats_json_path, 'r') as f:
