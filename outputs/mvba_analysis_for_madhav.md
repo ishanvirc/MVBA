@@ -1,4 +1,4 @@
-# MVBA Architecture Investigation: Summary of Findings
+# MVBA Architecture Investigation
 
 
 ## 1. Starting Point (August 2025)
@@ -166,7 +166,7 @@ Seven evaluation suites were run on the entropy-trained checkpoints, all on the 
 
 ---
 
-## 7. Key Results
+## 7. Key
 
 ### 7a. Architecture ablation
 
